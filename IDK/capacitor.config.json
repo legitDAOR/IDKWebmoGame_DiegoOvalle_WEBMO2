@@ -1,0 +1,16 @@
+{
+  "appId": "com.diego.IDK",
+  "appName": "IDK",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#000000"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true
+    }
+  }
+}

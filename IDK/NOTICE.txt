@@ -1,0 +1,12 @@
+IDK Game
+Copyright 2025 Diego Ovalle / DAOR Studios
+
+This product includes the following third-party software:
+
+Phaser 3 (https://phaser.io)
+Copyright 2025 Richard Davey / Photon Storm Ltd.
+Licensed under the MIT License.
+
+Capacitor (https://capacitorjs.com)
+Copyright 2025 Ionic / Appflow
+Licensed under the MIT License.
