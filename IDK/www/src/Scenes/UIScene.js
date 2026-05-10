@@ -20,7 +20,7 @@ export default class UIScene extends Phaser.Scene {
             .setStrokeStyle(4, 0xcc88ff, 0.8);
 
         // Title
-        this.add.text(960, 115, '🏰  Upgrade Tree', {
+        this.add.text(960, 140, '🏰  Upgrade Tree', {
             fontSize: '52px', color: '#ffffff', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5);
 
@@ -39,7 +39,7 @@ export default class UIScene extends Phaser.Scene {
         this.money = this.registry.get('money') || 0;
 
         // Money display
-        this.moneyText = this.add.text(960, 210, `💰  $${this.money}`, {
+        this.moneyText = this.add.text(960, 200, `💰  $${this.money}`, {
             fontSize: '38px', color: '#ffff00', fontFamily: 'Arial'
         }).setOrigin(0.5);
 

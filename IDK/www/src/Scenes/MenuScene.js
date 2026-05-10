@@ -47,7 +47,7 @@ export default class MenuScene extends Phaser.Scene {
             .setStrokeStyle(2, 0xffd700, 0.3);
 
         // ── TITLE ─────────────────────────────────────────────────────────
-        this.add.text(cx, 210, 'Factory Village', {
+        this.add.text(cx, 210, 'IDK: The Game', {
             fontSize:       Platform.FONT_TITLE,
             color:          '#ffd700',
             fontFamily:     'Arial',
@@ -63,7 +63,7 @@ export default class MenuScene extends Phaser.Scene {
         }).setOrigin(0.5);
 
         // Tagline
-        this.add.text(cx, 320, 'Build · Trade · Survive', {
+        this.add.text(cx, 320, 'Build · Trade · Evolve', {
             fontSize:    Platform.FONT_MD,
             color:       '#ccddff',
             fontFamily:  'Arial',

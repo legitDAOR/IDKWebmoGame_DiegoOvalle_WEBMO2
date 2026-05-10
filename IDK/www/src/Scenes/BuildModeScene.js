@@ -62,24 +62,24 @@ export default class BuildModeScene extends Phaser.Scene {
             fontSize: '34px', color: '#44ff44', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(101);
 
-        this.hintLabel = this.add.text(960, 130, 'Pick a machine below, then tap a green grid cell', {
+        this.hintLabel = this.add.text(870, 130, 'Pick a machine below, then tap a green grid cell', {
             fontSize: '27px', color: '#cccccc', fontFamily: 'Arial'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(101);
 
         // ── MODE TOGGLE ───────────────────────────────────────────────────────
-        this.placeBtn = this.add.rectangle(1350, 55, 210, 70, 0x1a5c1a, 1)
+        this.placeBtn = this.add.rectangle(1300, 55, 210, 70, 0x1a5c1a, 1)
             .setScrollFactor(0).setDepth(101)
             .setStrokeStyle(3, 0x44ff44, 1)
             .setInteractive({ useHandCursor: true });
-        this.add.text(1350, 55, '🔨 Place', {
+        this.add.text(1300, 55, '🔨 Place', {
             fontSize: '27px', color: '#ffffff', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(102);
 
-        this.destroyBtn = this.add.rectangle(1580, 55, 230, 70, 0x2a2a2a, 1)
+        this.destroyBtn = this.add.rectangle(1550, 55, 230, 70, 0x2a2a2a, 1)
             .setScrollFactor(0).setDepth(101)
             .setStrokeStyle(3, 0x666666, 0.6)
             .setInteractive({ useHandCursor: true });
-        this.destroyBtnLabel = this.add.text(1580, 55, '💥 Destroy', {
+        this.destroyBtnLabel = this.add.text(1550, 55, '💥 Destroy', {
             fontSize: '27px', color: '#aaaaaa', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(102);
 
@@ -87,11 +87,11 @@ export default class BuildModeScene extends Phaser.Scene {
         this.destroyBtn.on('pointerdown', () => this.setMode('destroy'));
 
         // ── BACK BUTTON ───────────────────────────────────────────────────────
-        const backBtn = this.add.rectangle(1820, 55, 220, 70, 0x8b0000, 1)
+        const backBtn = this.add.rectangle(1800, 55, 220, 70, 0x8b0000, 1)
             .setScrollFactor(0).setDepth(101)
             .setStrokeStyle(2, 0xff4444, 0.8)
             .setInteractive({ useHandCursor: true });
-        this.add.text(1820, 55, '← Back', {
+        this.add.text(1800, 55, '← Back', {
             fontSize: '27px', color: '#ffffff', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(102);
         backBtn.on('pointerover', () => backBtn.setFillStyle(0xaa0000));
@@ -100,14 +100,14 @@ export default class BuildModeScene extends Phaser.Scene {
         this.input.keyboard.on('keydown-ESC', () => this.returnToMainScene());
 
         // ── BOTTOM TRAY ───────────────────────────────────────────────────────
-        this.trayTopY = 880; // tray occupies 880–1080
+        this.trayTopY = 1000; // tray occupies 880–1080
         this.trayMidY = 980;
 
-        this.add.rectangle(960, this.trayMidY, 1920, 200, 0x111122, 0.93)
+        this.add.rectangle(960, this.trayMidY, 1920, 300, 0x111122, 0.93)
             .setScrollFactor(0).setDepth(100)
             .setStrokeStyle(3, 0x4444aa, 0.7);
 
-        this.trayLabel = this.add.text(40, this.trayTopY + 5, 'Machines in inventory:', {
+        this.trayLabel = this.add.text(40, this.trayTopY - 150, 'Machines in inventory:', {
             fontSize: '25px', color: '#aaaacc', fontFamily: 'Arial'
         }).setScrollFactor(0).setDepth(101);
 

@@ -26,7 +26,7 @@ export default class BootScene extends Phaser.Scene {
 
         this.add.rectangle(cx, H / 2, W, H, 0x111122);
 
-        this.add.text(cx, H / 2 - 80, 'Factory Village', {
+        this.add.text(cx, H / 2 - 80, 'IDK: The Game', {
             fontSize:   '64px',
             color:      '#ffd700',
             fontFamily: 'Arial',

@@ -29,12 +29,12 @@ export default class InventoryScene extends Phaser.Scene {
             .setStrokeStyle(4, 0xff9944, 0.8);
 
         // Title
-        this.add.text(960, 105, '🎒  Inventory', {
+        this.add.text(960, 155, '🎒  Inventory', {
             fontSize: '52px', color: '#ffffff', fontFamily: 'Arial', fontStyle: 'bold'
         }).setOrigin(0.5);
 
         // Money
-        this.moneyText = this.add.text(960, 170, `💰  $${this.money}`, {
+        this.moneyText = this.add.text(960, 250, `💰  $${this.money}`, {
             fontSize: '40px', color: '#ffff00', fontFamily: 'Arial'
         }).setOrigin(0.5);
 
@@ -94,13 +94,13 @@ export default class InventoryScene extends Phaser.Scene {
         const cellW = 280;
         const cellH = 160;
         const startX = 960 - ((Math.min(entries.length, cols) - 1) * cellW) / 2;
-        const startY = 340;
+        const startY = 380;
 
         entries.forEach(([type, count], index) => {
             const col = index % cols;
             const row = Math.floor(index / cols);
             const x = startX + col * cellW - (cols - 1) * cellW / 2 + (cols - 1) * cellW / 2;
-            const cx = 310 + col * cellW;
+            const cx = 550 + col * cellW;
             const cy = startY + row * cellH;
 
             // Item card
